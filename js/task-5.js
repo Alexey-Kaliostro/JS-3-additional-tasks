@@ -5,31 +5,42 @@ console.log(" ");
 //=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-
 /*
 
-Объяви три переменные и присвой каждой из них значение, используя нотацию квадратных скобок.
+Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment используя синтаксис «квадратных скобок».
 
-Имя переменной	Значение переменной
-firstElement	первый элемент массива
-secondElement	второй элемент массива
-lastElement	последний элемент массива
+aptRating - рейтинг;
+aptDescr - описание;
+aptPrice - цена;
+aptTags - теги.
 Тесты
-Объявлена переменная firstElement.
-Значение переменной firstElement это строка 'яблоко'.
-Объявлена переменная secondElement.
-Значение переменной secondElement это строка 'слива'.
-Объявлена переменная lastElement.
-Значение переменной lastElement это строка 'апельсин'.
+Объявлена переменная apartment.
+Значение переменной apartment это объект.
+Объявлена переменная aptRating.
+Значение переменной aptRating это 4.
+Объявлена переменная aptDescr.
+Значение переменной aptDescr это 'Просторная квартира в центре'.
+Объявлена переменная aptPrice.
+Значение переменной aptPrice это 2153.
+Объявлена переменная aptTags.
+Значение переменной aptTags это ['premium', 'promoted', 'top'].
 
 */
 
 //Task START
 
-// Стартовый код
-const fruits = ['яблоко', 'слива', 'груша', 'апельсин'];
-// Пиши код ниже этой строки
+const apartment = {
+  imgUrl: 'https://via.placeholder.com/640x480',
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+  tags: ['premium', 'promoted', 'top'],
+};
 
-const firstElement = fruits[0];
-const secondElement = fruits[1];
-const lastElement = fruits[3];
+// Пиши код ниже этой строки
+const aptRating = apartment['rating'];
+const aptDescr = apartment['descr'];
+const aptPrice = apartment['price'];
+const aptTags = apartment['tags'];
+// Пиши код выше этой строки
 
 //Task END
 
