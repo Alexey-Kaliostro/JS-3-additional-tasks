@@ -5,31 +5,33 @@ console.log(" ");
 //=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-
 /*
 
-Дополни код так, чтобы переменные содержали частичные копии исходного массива fruits.
+Выполни рефакторинг функции countProps(object) используя метод Object.keys() и, возможно, цикл for...of.
 
-firstTwoEls - массив из первых двух элементов.
-nonExtremeEls - массив из всех элементов кроме первого и последнего.
-lastThreeEls - массив из трёх последних элементов.
 Тесты
-Объявлена переменная fruits
-Значение переменной fruits это массив ['яблоко', 'слива', 'груша', 'апельсин', 'банан'].
-Объявлена переменная firstTwoEls
-Значение переменной firstTwoEls это массив ['яблоко', 'слива'].
-Объявлена переменная nonExtremeEls
-Значение переменной nonExtremeEls это массив ['слива', 'груша', 'апельсин'].
-Объявлена переменная lastThreeEls.
-Значение переменной lastThreeEls это массив ['груша', 'апельсин', 'банан'].
-Переменной lastThreeEls присвоена копия части массива fruits после применения метода slice с правильными аргументами.
+Объявлена функция countProps(object).
+Вызов countProps({}) возвращает 0.
+Вызов countProps({ name: 'Mango', age: 2 }) возвращает 2.
+Вызов countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }) возвращает 3.
+Функция подсчитывает только собственные свойства объекта.
+Функция использует метод Object.keys() и, возможно, цикл for...of.
 
 */
 
 //Task START
 
-const fruits = ['яблоко', 'слива', 'груша', 'апельсин', 'банан'];
-// Пиши код ниже этой строки
-const firstTwoEls = fruits.slice(0, 2);
-const nonExtremeEls = fruits.slice(1, fruits.length -1) ;
-const lastThreeEls = fruits.slice(-3);
+function countProps(object) {
+  // Пиши код ниже этой строки
+  let propCount = 0;
+
+ const keys = Object.keys(object);
+  
+  for (const key of keys){
+    propCount +=1
+  }
+
+  return propCount;
+  // Пиши код выше этой строки
+}
 
 //Task END
 
