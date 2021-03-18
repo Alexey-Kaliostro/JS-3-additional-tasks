@@ -5,27 +5,34 @@ console.log(" ");
 //=-=-=-==-=-=-=-=-=-=-=-==-=-=-=-=-
 /*
 
-Дополни код функции splitMessage(message, delimeter) так, чтобы она возвращала в переменной words результат разделения строки message по разделителю delimeter - массив строк.
+Задание
+Перебери объект apartment используя цикл for...in и запиши в массив keys все его ключи, а в массив values все значения его свойств.
 
 Тесты
-Объявлена функция splitMessage(message, delimeter).
-Вызов splitMessage('Манго спешит на поезд', ' ') возвращает ['Манго', 'спешит', 'на', 'поезд'].
-Вызов splitMessage('Манго', '') возвращает ['М', 'а', 'н', 'г', 'о'].
-Вызов splitMessage('лучшее_за_неделю', '_') возвращает ['лучшее', 'за', 'неделю'].
+Объявлена переменная apartment.
+Значение переменной apartment это объект.
+Объявлена переменная keys.
+Значение переменной keys это массив ['descr', 'rating', 'price'].
+Объявлена переменная values.
+Значение переменной values это массив ['Просторная квартира в центре', 4, 2153]
 
 */
 
 //Task START
 
-function splitMessage(message, delimeter) {
-  let words;
-  // Пиши код ниже этой строки
-  
-  words = message.split(delimeter);
-  
-  // Пиши код выше этой строки
-  return words;
+const apartment = {
+  descr: 'Просторная квартира в центре',
+  rating: 4,
+  price: 2153,
+};
+const keys = [];
+const values = [];
+// Пиши код ниже этой строки
+for (const key in apartment){
+  keys.push(key);
+  values.push(apartment[key]);
 }
+
 
 //Task END
 
