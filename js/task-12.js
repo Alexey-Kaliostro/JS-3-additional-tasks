@@ -6,27 +6,33 @@ console.log(" ");
 /*
 
 Задание
-Дополни код функции makeStringFromArray(array, delimeter) так, чтобы она возвращала в переменной string результат соединения элементов массива array c разделителем delimeter - строку.
+Напиши функцию countProps(object), которая считает и возвращает количество собственных свойств объекта в параметре object. Используй переменную propCount для хранения количества свойств объекта.
 
 Тесты
-Объявлена функция makeStringFromArray(array, delimeter).
-Вызов makeStringFromArray(['Манго', 'спешит', 'на', 'поезд'], ' ') возвращает 'Манго спешит на поезд'.
-Вызов makeStringFromArray(['М', 'а', 'н', 'г', 'о'], '')) возвращает 'Манго'.
-Вызов makeStringFromArray(['лучшее', 'за', 'неделю'], '_') возвращает 'лучшее_за_неделю'.
+Объявлена функция countProps(object).
+Вызов countProps({}) возвращает 0.
+Вызов countProps({ name: 'Mango', age: 2 }) возвращает 2.
+Вызов countProps{ mail: 'poly@mail.com', isOnline: true, score: 500 }) возвращает 3.
+Функция подсчитывает только собственные свойства объекта.
 
 */
 
 //Task START
 
-function makeStringFromArray(array, delimeter) {
-  let string;
+unction countProps(object) {
+  let propCount = 0;
   // Пиши код ниже этой строки
- 
- return array.join(delimeter);
- 
-  // Пиши код выше этой строки
-  return string;
+
+  for (key in object){
+  if (object.hasOwnProperty(key)){
+    propCount += 1;
+  }
 }
+  
+  // Пиши код выше этой строки
+  return propCount;
+}
+
 
 //Task END
 
